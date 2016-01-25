@@ -3,3 +3,4 @@
 *.pyc
 __PyCache__
 _options.py
+.idea/
