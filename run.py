@@ -3,7 +3,7 @@ import subprocess
 # import Foundation
 import time
 
-from options import RSS_URL, RSS_TITLE, NOTIFCATION_DELAY, CHECK_DELAY
+from options import RSS_URL, RSS_TITLE, NOTIFICATION_DELAY, CHECK_DELAY
 
 
 rss_url = RSS_URL
@@ -29,7 +29,7 @@ while True:
                 base_cmd = 'display notification "{0}" with title "{1}"'.format(_notification, rss_title)
                 cmd = apple_cmd.format(base_cmd)
                 subprocess.Popen([cmd], shell=True)
-                time.sleep(NOTIFCATION_DELAY)
+                time.sleep(NOTIFICATION_DELAY)
     time.sleep(CHECK_DELAY)
 
 
