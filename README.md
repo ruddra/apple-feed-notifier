@@ -6,10 +6,13 @@ AppleFeedNotifier is a simple python applications for creating notifications in 
 1. Create a `_options.py` file inside the directory(No worries, its in `.gitignore`)
 2. Run `pip3 install -r 'requirements.txt'`
 3. Add desired RSS feed url like this:
+\n
         <code>
-\n
+
 RSS_URL = 'https://feedity.com/ruddra-com/VFZQWlFU.rss'
+</code>
 \n
+<code>
 RSS_TITLE = "Ruddra.com"
 </code>
 4. Now run this application using `python3 run.py`
