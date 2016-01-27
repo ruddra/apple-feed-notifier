@@ -23,8 +23,10 @@ while True:
             _id = entry.id
             _notification = entry.title.replace("'", '`').replace('"', '``')
             if _id in dup_ids:
-                print('Entry already exists')
+                print('Entry already exists, ')
+                break
             else:
+                print(_notification)
                 dup_ids.append(_id)
                 base_cmd = 'display notification "{0}" with title "{1}"'.format(_notification, rss_title)
                 cmd = apple_cmd.format(base_cmd)
