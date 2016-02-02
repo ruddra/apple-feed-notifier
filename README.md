@@ -5,7 +5,7 @@ AppleFeedNotifier is a simple python applications for creating notifications in 
 
 1. Run `pip3 install -r 'requirements.txt'`
 
-2. Now run this application using `python run.py -nt 5 -ct 10 -t DjangoLatest -u http://stackoverflow.com/feeds/tag\?tagnames\=django\&sort\=newest`
+2. Now run this application using `python run.py -nt 5 -ct 60 -t 'Django Latest' -u http://stackoverflow.com/feeds/tag\?tagnames\=django\&sort\=newest`
 
 ##Tutorial
 
