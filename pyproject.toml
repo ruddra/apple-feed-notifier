@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apple-feed-notifier"
+version = "0.1.0"
+description = "Display MacOS notifications when an RSS/Atom feed is updated"
+license = {file = "LICENSE"}
+authors = [{name = "Arnab Kumar Shil", email = "ruddra90@gmail.com"}]
+dependencies = ["feedparser>=6.0.10"]
+
+[project.urls]
+Homepage = "https://github.com/ruddra/apple-feed-notifier"
+
+[tool.setuptools]
+py-modules = ["feed_notify"]
+
+[project.scripts]
+feed-notify = "feed_notify:main"
