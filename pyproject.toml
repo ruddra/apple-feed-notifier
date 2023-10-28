@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "apple-feed-notifier"
 version = "0.1.0"
 description = "Display MacOS notifications when an RSS/Atom feed is updated"
+readme = "README.md"
 license = {file = "LICENSE"}
 authors = [{name = "Arnab Kumar Shil", email = "ruddra90@gmail.com"}]
 dependencies = ["feedparser>=6.0.10"]
