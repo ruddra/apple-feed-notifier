@@ -138,8 +138,7 @@ def main() -> None:
     """
     import sys
 
-    logging.basicConfig(
-        level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
+    loglevel = logging.INFO
 
     notification_delay = 5
     check_delay = 300
@@ -147,7 +146,7 @@ def main() -> None:
     rss = 'https://feedparser.readthedocs.io/en/latest/examples/rss20.xml'
 
     if '-h' in sys.argv or '-?' in sys.argv or '--help' in sys.argv:
-        print(f'Usage: {sys.argv[0]} [-h] [-nt N] [-ct N] [-t T] [-u U]')
+        print(f'Usage: {sys.argv[0]} [-h] [-nt N] [-ct N] [-t T] [-u U] [-q]')
         sys.exit(0)
 
     if '-nt' in sys.argv:
@@ -161,6 +160,12 @@ def main() -> None:
 
     if '-u' in sys.argv:
         rss = sys.argv[sys.argv.index('-u') + 1]
+
+    if '-q' in sys.argv:
+        loglevel = logging.WARNING
+
+    logging.basicConfig(
+        level=loglevel, format='%(asctime)s %(levelname)s %(message)s')
 
     FeedNotifier(rss, title, check_delay, notification_delay).watch()
 
